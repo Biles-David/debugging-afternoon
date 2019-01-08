@@ -15,7 +15,7 @@ class StoreFront extends Component {
         axios.get("https://practiceapi.devmountain.com/products/")
             .then((response) => {
                 this.setState({
-                    products: response
+                    products: response.data
                 })
             })
     }
@@ -28,7 +28,7 @@ class StoreFront extends Component {
                     <img src={element.image} alt="" />
                     <h2>{element.desc}</h2>
                     <h3>{"$" + element.price + ".00"}</h3>
-                    <button onClick={() => this.props.addToShoppingCart(element)}>Purchase!</button>
+                    <button onClick={() => this.props.addToShoppingCart(console.log(element) || element)}>Purchase!</button>
                 </div>
             )
         })

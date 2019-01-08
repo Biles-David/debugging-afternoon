@@ -1,6 +1,11 @@
-import axios from 'axios';
+const axios = require('axios')
+// import axios from 'axios';
 
-const getAllProducts = function() {
+const getProducts = () => {
     return axios.get("https://practiceapi.devmountain.com/products/")
     .then(response => response.data);
+}
+
+module.exports = {
+    getProducts
 }

@@ -45,7 +45,7 @@ class App extends Component {
             return <StoreFront
               addToShoppingCart={this.addToShoppingCart} />
           }} />
-          <Route path="/shoppingcart" render={() => {
+          <Route path="/shoppingCart" render={() => {
             return <ShoppingCart
               shoppingCart={this.state.shoppingCart}
               removeFromShoppingCart={this.removeFromShoppingCart} />

@@ -19,7 +19,7 @@ class ShoppingCart extends Component {
                     </div>
                 </div>
             )
-        })
+        });
         return (
             <div className="shopping-cart-container">
                 {shoppingCartDisplay[0] ? 
@@ -37,4 +37,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(ShoppingCart);
+export default connect(mapStateToProps, {removeFromShoppingCart})(ShoppingCart);
